@@ -1,10 +1,10 @@
 import express from 'express';
 const router = express.Router();
 import Joi from 'joi';
-import { validateRequest } from "../middleware/validateRequest";
+import { validateRequest } from "../middleware/validate-request";
 import authorize from '../middleware/authorize';
 import { Role } from '../_helpers/role';
-import accountService from '../accounts/accounts.service';
+import accountService from '../accounts/account.service';
 
 router.post('/authenticate', authenticateSchema, authenticate);
 router.post('/refresh-token', refreshToken);
